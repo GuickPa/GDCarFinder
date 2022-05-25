@@ -1,2 +1,2 @@
 # GDCarFinder
-Find shared car in Hamburg!
+Find shared cars in Hamburg!
