@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Guglielmo Deletis on 19/04/22.
+  
+*/
+
+// errors
+"gd_error_instance" = "An instance was already init";
+"gd_error_unallowed_method" = "Method not allowed";
+"gd_error_bad_format" = "Bad format";
+"gd_error_aborted" = "Operation aborted";
+"gd_error_title" = "Error";
+"gd_generic_error" = "Unknown error";
+
+// generic messages
+"gd_message_unknown" = "Unknown";
+
+// Tab titles
+"gd_tab_profile_title" = "Profile";
+"gd_tab_locations_title" = "Origin and locations";
+"gd_tab_episodes_title" = "Episodes";
