@@ -14,10 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let loader = GDDataLoader()
-        let listHandler = GDCarListHandler(decoder: GDGenericDataDecoder(), cellHandler: GDPoiTableViewCellHandler())
-        let mainVC = GDListViewController(loader: loader, listHandler: listHandler)
-        window?.rootViewController = mainVC
+        window?.rootViewController = GDTabBarController()
         window?.makeKeyAndVisible()
 
         return true

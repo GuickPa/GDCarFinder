@@ -18,6 +18,5 @@
 "gd_message_unknown" = "Unknown";
 
 // Tab titles
-"gd_tab_profile_title" = "Profile";
-"gd_tab_locations_title" = "Origin and locations";
-"gd_tab_episodes_title" = "Episodes";
+"gd_tab_list_title" = "List";
+"gd_tab_map_title" = "Map";

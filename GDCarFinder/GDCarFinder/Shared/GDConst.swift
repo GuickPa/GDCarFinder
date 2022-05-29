@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class GDConst {
     static let baseURLString = "https://poi-api.mytaxi.com"
@@ -17,6 +18,11 @@ class GDConst {
     static let defaultBackgroundColor = UIColor(hexString: "3C3E44")
     static let cellBGColor0 = UIColor(hexString: "FEFEFE")
     static let cellBGColor1 = UIColor(hexString: "FAFAFA")
+    
+    // constants
+    static let centerCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.5532674, longitude: 9.9907421) // Hamburg center from Google Maps
+    static let regionP1Coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.5600808, longitude: 9.9242722)
+    static let regionP2Coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.394655, longitude: 10.099891)
     
     // generic messages
     static let messageUnknown = GDConst.localizedString("gd_message_unknown")
