@@ -8,7 +8,7 @@
 import Foundation
 
 struct GDCoordinate: Codable {
-    var latitute: Double
+    var latitude: Double
     var longitude: Double
 }
 

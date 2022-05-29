@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE3733DE28401CB5000F4AC8 /* GDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */; };
+		BE3733E128401D05000F4AC8 /* GDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733DF28401D05000F4AC8 /* GDView.swift */; };
+		BE3733E228401D05000F4AC8 /* GDPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E028401D05000F4AC8 /* GDPicView.swift */; };
+		BE3733E528401E0C000F4AC8 /* GDListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E428401E0C000F4AC8 /* GDListViewController.swift */; };
+		BE3733E728402657000F4AC8 /* GDListHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E628402657000F4AC8 /* GDListHandler.swift */; };
 		BEA4C42D283EA39900F0D83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C42C283EA39900F0D83B /* AppDelegate.swift */; };
 		BEA4C431283EA39900F0D83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C430283EA39900F0D83B /* ViewController.swift */; };
 		BEA4C436283EA39A00F0D83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA4C435283EA39A00F0D83B /* Assets.xcassets */; };
@@ -28,6 +33,14 @@
 		BEA4C494283EA47100F0D83B /* GDLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C490283EA47100F0D83B /* GDLoader.swift */; };
 		BEA4C496283EA4CB00F0D83B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEA4C495283EA4CB00F0D83B /* Localizable.strings */; };
 		BEA4C499283ED2D400F0D83B /* GDPoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C498283ED2D400F0D83B /* GDPoi.swift */; };
+		BEC628CB2840BC8E00429251 /* GDTableViewCellHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC628CA2840BC8E00429251 /* GDTableViewCellHandler.swift */; };
+		BEC628CD2840BCE100429251 /* GDPoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC628CC2840BCE100429251 /* GDPoiTableViewCell.swift */; };
+		BEC628CF2840BF9D00429251 /* GDDataDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC628CE2840BF9D00429251 /* GDDataDecoderTests.swift */; };
+		BECFCA4328410A690050D3E9 /* GDListHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFCA4228410A690050D3E9 /* GDListHandlerTests.swift */; };
+		BECFCA452841123B0050D3E9 /* GDListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BECFCA442841123B0050D3E9 /* GDListViewController.xib */; };
+		BECFCA47284117670050D3E9 /* GDPoiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BECFCA46284117670050D3E9 /* GDPoiTableViewCell.xib */; };
+		BEF1DA58283F8AA40067F37B /* GDOperationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF1DA56283F8AA40067F37B /* GDOperationTest.swift */; };
+		BEF1DA59283F8AA40067F37B /* GDAPIOperationActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF1DA57283F8AA40067F37B /* GDAPIOperationActionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDBaseViewController.swift; sourceTree = "<group>"; };
+		BE3733DF28401D05000F4AC8 /* GDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDView.swift; sourceTree = "<group>"; };
+		BE3733E028401D05000F4AC8 /* GDPicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPicView.swift; sourceTree = "<group>"; };
+		BE3733E428401E0C000F4AC8 /* GDListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListViewController.swift; sourceTree = "<group>"; };
+		BE3733E628402657000F4AC8 /* GDListHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListHandler.swift; sourceTree = "<group>"; };
 		BEA4C429283EA39900F0D83B /* GDCarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDCarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA4C42C283EA39900F0D83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA4C430283EA39900F0D83B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +91,14 @@
 		BEA4C490283EA47100F0D83B /* GDLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDLoader.swift; sourceTree = "<group>"; };
 		BEA4C495283EA4CB00F0D83B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BEA4C498283ED2D400F0D83B /* GDPoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPoi.swift; sourceTree = "<group>"; };
+		BEC628CA2840BC8E00429251 /* GDTableViewCellHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTableViewCellHandler.swift; sourceTree = "<group>"; };
+		BEC628CC2840BCE100429251 /* GDPoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPoiTableViewCell.swift; sourceTree = "<group>"; };
+		BEC628CE2840BF9D00429251 /* GDDataDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDDataDecoderTests.swift; sourceTree = "<group>"; };
+		BECFCA4228410A690050D3E9 /* GDListHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListHandlerTests.swift; sourceTree = "<group>"; };
+		BECFCA442841123B0050D3E9 /* GDListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDListViewController.xib; sourceTree = "<group>"; };
+		BECFCA46284117670050D3E9 /* GDPoiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDPoiTableViewCell.xib; sourceTree = "<group>"; };
+		BEF1DA56283F8AA40067F37B /* GDOperationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDOperationTest.swift; sourceTree = "<group>"; };
+		BEF1DA57283F8AA40067F37B /* GDAPIOperationActionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDAPIOperationActionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +126,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE3733DA28401C91000F4AC8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BE3733E328401DE3000F4AC8 /* Nib */,
+				BE3733DC28401CA7000F4AC8 /* View */,
+				BE3733DB28401C9C000F4AC8 /* ViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BE3733DB28401C9C000F4AC8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */,
+				BE3733E428401E0C000F4AC8 /* GDListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BE3733DC28401CA7000F4AC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE3733E028401D05000F4AC8 /* GDPicView.swift */,
+				BE3733DF28401D05000F4AC8 /* GDView.swift */,
+				BEC628CC2840BCE100429251 /* GDPoiTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE3733E328401DE3000F4AC8 /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				BECFCA442841123B0050D3E9 /* GDListViewController.xib */,
+				BECFCA46284117670050D3E9 /* GDPoiTableViewCell.xib */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
 		BEA4C420283EA39900F0D83B = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +188,7 @@
 		BEA4C42B283EA39900F0D83B /* GDCarFinder */ = {
 			isa = PBXGroup;
 			children = (
+				BE3733DA28401C91000F4AC8 /* UI */,
 				BEA4C497283ED2BE00F0D83B /* Model */,
 				BEA4C48C283EA47100F0D83B /* Handler */,
 				BEA4C476283EA3F400F0D83B /* Operations */,
@@ -141,7 +206,11 @@
 		BEA4C442283EA39A00F0D83B /* GDCarFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				BEF1DA57283F8AA40067F37B /* GDAPIOperationActionTests.swift */,
+				BEF1DA56283F8AA40067F37B /* GDOperationTest.swift */,
 				BEA4C443283EA39A00F0D83B /* GDCarFinderTests.swift */,
+				BEC628CE2840BF9D00429251 /* GDDataDecoderTests.swift */,
+				BECFCA4228410A690050D3E9 /* GDListHandlerTests.swift */,
 			);
 			path = GDCarFinderTests;
 			sourceTree = "<group>";
@@ -199,6 +268,8 @@
 			children = (
 				BEA4C48D283EA47100F0D83B /* GDDataDecoder.swift */,
 				BEA4C490283EA47100F0D83B /* GDLoader.swift */,
+				BE3733E628402657000F4AC8 /* GDListHandler.swift */,
+				BEC628CA2840BC8E00429251 /* GDTableViewCellHandler.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -318,6 +389,8 @@
 				BEA4C439283EA39A00F0D83B /* LaunchScreen.storyboard in Resources */,
 				BEA4C496283EA4CB00F0D83B /* Localizable.strings in Resources */,
 				BEA4C436283EA39A00F0D83B /* Assets.xcassets in Resources */,
+				BECFCA452841123B0050D3E9 /* GDListViewController.xib in Resources */,
+				BECFCA47284117670050D3E9 /* GDPoiTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,17 +416,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA4C485283EA3F400F0D83B /* GDOperationAction.swift in Sources */,
+				BEC628CD2840BCE100429251 /* GDPoiTableViewCell.swift in Sources */,
+				BE3733E528401E0C000F4AC8 /* GDListViewController.swift in Sources */,
+				BE3733E128401D05000F4AC8 /* GDView.swift in Sources */,
 				BEA4C484283EA3F400F0D83B /* GDOperation.swift in Sources */,
 				BEA4C494283EA47100F0D83B /* GDLoader.swift in Sources */,
 				BEA4C431283EA39900F0D83B /* ViewController.swift in Sources */,
 				BEA4C487283EA3F400F0D83B /* GDError.swift in Sources */,
 				BEA4C48A283EA3F400F0D83B /* GDLogger.swift in Sources */,
 				BEA4C488283EA3F400F0D83B /* GDConst.swift in Sources */,
+				BE3733E228401D05000F4AC8 /* GDPicView.swift in Sources */,
 				BEA4C486283EA3F400F0D83B /* GDString.swift in Sources */,
+				BE3733E728402657000F4AC8 /* GDListHandler.swift in Sources */,
 				BEA4C489283EA3F400F0D83B /* GDColor.swift in Sources */,
 				BEA4C499283ED2D400F0D83B /* GDPoi.swift in Sources */,
+				BE3733DE28401CB5000F4AC8 /* GDBaseViewController.swift in Sources */,
 				BEA4C48B283EA3F400F0D83B /* GDViewLoader.swift in Sources */,
 				BEA4C482283EA3F400F0D83B /* GDSession.swift in Sources */,
+				BEC628CB2840BC8E00429251 /* GDTableViewCellHandler.swift in Sources */,
 				BEA4C483283EA3F400F0D83B /* GDOperationQueueManager.swift in Sources */,
 				BEA4C491283EA47100F0D83B /* GDDataDecoder.swift in Sources */,
 				BEA4C42D283EA39900F0D83B /* AppDelegate.swift in Sources */,
@@ -364,6 +444,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECFCA4328410A690050D3E9 /* GDListHandlerTests.swift in Sources */,
+				BEF1DA59283F8AA40067F37B /* GDAPIOperationActionTests.swift in Sources */,
+				BEC628CF2840BF9D00429251 /* GDDataDecoderTests.swift in Sources */,
+				BEF1DA58283F8AA40067F37B /* GDOperationTest.swift in Sources */,
 				BEA4C444283EA39A00F0D83B /* GDCarFinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

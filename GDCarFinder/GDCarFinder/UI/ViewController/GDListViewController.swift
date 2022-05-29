@@ -1,0 +1,95 @@
+//
+//  GDListViewController.swift
+//  GDCarFinder
+//
+//  Created by Guglielmo Deletis on 26/05/22.
+//
+
+import UIKit
+
+class GDListViewController: GDBaseViewController {
+    @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
+    private var listHandler: GDListHandler
+    
+    init(loader:GDLoader, listHandler: GDListHandler) {
+        self.listHandler = listHandler
+        super.init(loader: loader, nibName: "GDListViewController", bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.mainTableView.register(
+            UINib(nibName: "GDPoiTableViewCell", bundle: nil),
+            forCellReuseIdentifier: GDPoiTableViewCell.reuseIdentifier
+        )
+        // load character list
+        self.loadingView.isHidden = false
+        self.loader.delegate = self
+        self.loader.load(urlString: GDConst.defaultVehicleListURLString, handler: GDOperationQueueManager.instance)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+}
+
+//MARK: UITableViewDataSource
+extension GDListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.listHandler.tableView(tableView, numberOfRowsInSection: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return self.listHandler.tableView(tableView, cellForRowAt: indexPath)
+    }
+}
+
+//MARK: UITableViewDelegate
+extension GDListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.listHandler.tableView(tableView, willDisplay: cell, forRowAt: indexPath)
+    }
+}
+
+//MARK: GDLoaderDelegate
+extension GDListViewController: GDLoaderDelegate {
+    func loaderDidStart(_ loader: GDLoader) {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = false
+        }
+    }
+    
+    func loaderDidLoad(_ loader: GDLoader, data: [Data]?) {
+        if let d = data?[0] {
+            self.listHandler.listFromData(d)
+        }
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+            self.mainTableView.dataSource = self
+            self.mainTableView.delegate = self
+            self.mainTableView.reloadData()
+        }
+    }
+    
+    func loaderFailed(_ loader: GDLoader, error: Error) {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+            self.showError(error)
+        }
+    }
+    
+    func loaderCancelled(_ loader: GDLoader) {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+        }
+    }
+}
