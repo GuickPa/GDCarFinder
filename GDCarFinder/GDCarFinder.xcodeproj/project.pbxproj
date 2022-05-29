@@ -12,6 +12,9 @@
 		BE3733E228401D05000F4AC8 /* GDPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E028401D05000F4AC8 /* GDPicView.swift */; };
 		BE3733E528401E0C000F4AC8 /* GDListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E428401E0C000F4AC8 /* GDListViewController.swift */; };
 		BE3733E728402657000F4AC8 /* GDListHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E628402657000F4AC8 /* GDListHandler.swift */; };
+		BE44B4652844199500C72AE3 /* GDPoiAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B4642844199500C72AE3 /* GDPoiAnnotation.swift */; };
+		BE44B46728441C4400C72AE3 /* GDMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B46628441C4400C72AE3 /* GDMapViewController.swift */; };
+		BE44B46B284428B600C72AE3 /* GDTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B46A284428B600C72AE3 /* GDTableViewHandler.swift */; };
 		BEA4C42D283EA39900F0D83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C42C283EA39900F0D83B /* AppDelegate.swift */; };
 		BEA4C431283EA39900F0D83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C430283EA39900F0D83B /* ViewController.swift */; };
 		BEA4C436283EA39A00F0D83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA4C435283EA39A00F0D83B /* Assets.xcassets */; };
@@ -33,7 +36,6 @@
 		BEA4C494283EA47100F0D83B /* GDLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C490283EA47100F0D83B /* GDLoader.swift */; };
 		BEA4C496283EA4CB00F0D83B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEA4C495283EA4CB00F0D83B /* Localizable.strings */; };
 		BEA4C499283ED2D400F0D83B /* GDPoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4C498283ED2D400F0D83B /* GDPoi.swift */; };
-		BEA98D062843D75E006BD165 /* GDMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA98D042843D75E006BD165 /* GDMapViewController.m */; };
 		BEA98D072843D75E006BD165 /* GDMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA98D052843D75E006BD165 /* GDMapViewController.xib */; };
 		BEA98D0A2843D7C5006BD165 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA98D092843D7C5006BD165 /* MapKit.framework */; };
 		BEA98D0C2843DE53006BD165 /* GDMapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA98D0B2843DE53006BD165 /* GDMapHandler.swift */; };
@@ -72,6 +74,9 @@
 		BE3733E028401D05000F4AC8 /* GDPicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPicView.swift; sourceTree = "<group>"; };
 		BE3733E428401E0C000F4AC8 /* GDListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListViewController.swift; sourceTree = "<group>"; };
 		BE3733E628402657000F4AC8 /* GDListHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListHandler.swift; sourceTree = "<group>"; };
+		BE44B4642844199500C72AE3 /* GDPoiAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPoiAnnotation.swift; sourceTree = "<group>"; };
+		BE44B46628441C4400C72AE3 /* GDMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMapViewController.swift; sourceTree = "<group>"; };
+		BE44B46A284428B600C72AE3 /* GDTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTableViewHandler.swift; sourceTree = "<group>"; };
 		BEA4C429283EA39900F0D83B /* GDCarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDCarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA4C42C283EA39900F0D83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA4C430283EA39900F0D83B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +103,6 @@
 		BEA4C495283EA4CB00F0D83B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BEA4C498283ED2D400F0D83B /* GDPoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPoi.swift; sourceTree = "<group>"; };
 		BEA98D022843D75D006BD165 /* GDCarFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GDCarFinder-Bridging-Header.h"; sourceTree = "<group>"; };
-		BEA98D032843D75E006BD165 /* GDMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDMapViewController.h; sourceTree = "<group>"; };
-		BEA98D042843D75E006BD165 /* GDMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDMapViewController.m; sourceTree = "<group>"; };
 		BEA98D052843D75E006BD165 /* GDMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDMapViewController.xib; sourceTree = "<group>"; };
 		BEA98D092843D7C5006BD165 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BEA98D0B2843DE53006BD165 /* GDMapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMapHandler.swift; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 		BE3733DA28401C91000F4AC8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE44B4622844196300C72AE3 /* Map */,
 				BE3733E328401DE3000F4AC8 /* Nib */,
 				BE3733DC28401CA7000F4AC8 /* View */,
 				BE3733DB28401C9C000F4AC8 /* ViewController */,
@@ -157,9 +161,8 @@
 			children = (
 				BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */,
 				BE3733E428401E0C000F4AC8 /* GDListViewController.swift */,
-				BEA98D032843D75E006BD165 /* GDMapViewController.h */,
-				BEA98D042843D75E006BD165 /* GDMapViewController.m */,
 				BEA98D0F28440AF6006BD165 /* GDTabBarController.swift */,
+				BE44B46628441C4400C72AE3 /* GDMapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -182,6 +185,21 @@
 				BEA98D052843D75E006BD165 /* GDMapViewController.xib */,
 			);
 			path = Nib;
+			sourceTree = "<group>";
+		};
+		BE44B4622844196300C72AE3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		BE44B4632844197300C72AE3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BE44B4642844199500C72AE3 /* GDPoiAnnotation.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		BEA4C420283EA39900F0D83B = {
@@ -293,6 +311,7 @@
 				BE3733E628402657000F4AC8 /* GDListHandler.swift */,
 				BEC628CA2840BC8E00429251 /* GDTableViewCellHandler.swift */,
 				BEA98D0B2843DE53006BD165 /* GDMapHandler.swift */,
+				BE44B46A284428B600C72AE3 /* GDTableViewHandler.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -300,6 +319,7 @@
 		BEA4C497283ED2BE00F0D83B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE44B4632844197300C72AE3 /* Map */,
 				BEA4C498283ED2D400F0D83B /* GDPoi.swift */,
 			);
 			path = Model;
@@ -451,6 +471,7 @@
 			files = (
 				BEA4C485283EA3F400F0D83B /* GDOperationAction.swift in Sources */,
 				BEC628CD2840BCE100429251 /* GDPoiTableViewCell.swift in Sources */,
+				BE44B46B284428B600C72AE3 /* GDTableViewHandler.swift in Sources */,
 				BE3733E528401E0C000F4AC8 /* GDListViewController.swift in Sources */,
 				BE3733E128401D05000F4AC8 /* GDView.swift in Sources */,
 				BEA98D0C2843DE53006BD165 /* GDMapHandler.swift in Sources */,
@@ -459,6 +480,7 @@
 				BEA4C494283EA47100F0D83B /* GDLoader.swift in Sources */,
 				BEA4C431283EA39900F0D83B /* ViewController.swift in Sources */,
 				BEA4C487283EA3F400F0D83B /* GDError.swift in Sources */,
+				BE44B4652844199500C72AE3 /* GDPoiAnnotation.swift in Sources */,
 				BEA4C48A283EA3F400F0D83B /* GDLogger.swift in Sources */,
 				BEA4C488283EA3F400F0D83B /* GDConst.swift in Sources */,
 				BE3733E228401D05000F4AC8 /* GDPicView.swift in Sources */,
@@ -470,10 +492,10 @@
 				BEA4C48B283EA3F400F0D83B /* GDViewLoader.swift in Sources */,
 				BEA4C482283EA3F400F0D83B /* GDSession.swift in Sources */,
 				BEC628CB2840BC8E00429251 /* GDTableViewCellHandler.swift in Sources */,
-				BEA98D062843D75E006BD165 /* GDMapViewController.m in Sources */,
 				BEA4C483283EA3F400F0D83B /* GDOperationQueueManager.swift in Sources */,
 				BEA4C491283EA47100F0D83B /* GDDataDecoder.swift in Sources */,
 				BEA4C42D283EA39900F0D83B /* AppDelegate.swift in Sources */,
+				BE44B46728441C4400C72AE3 /* GDMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

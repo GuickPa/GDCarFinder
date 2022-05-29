@@ -5,6 +5,6 @@
 #ifndef GDCarFinder_CBridgingHeader_h
 #define GDCarFinder_CBridgingHeader_h
 
-#import "UI/ViewController/GDMapViewController.h"
+// #import "UI/ViewController/GDMapViewController.h"
 
 #endif /* GDCarFinder_CBridgingHeader_h */

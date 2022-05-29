@@ -10,10 +10,10 @@ import UIKit
 class GDListViewController: GDBaseViewController {
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
-    private var listHandler: GDListHandler
+    private var tableViewHandler: GDTableViewHandler
     
-    init(loader:GDLoader, listHandler: GDListHandler) {
-        self.listHandler = listHandler
+    init(loader:GDLoader, tableViewHandler: GDTableViewHandler) {
+        self.tableViewHandler = tableViewHandler
         super.init(loader: loader, nibName: "GDListViewController", bundle: nil)
     }
 
@@ -41,11 +41,11 @@ class GDListViewController: GDBaseViewController {
 //MARK: UITableViewDataSource
 extension GDListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listHandler.tableView(tableView, numberOfRowsInSection: section)
+        return self.tableViewHandler.tableView(tableView, numberOfRowsInSection: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return self.listHandler.tableView(tableView, cellForRowAt: indexPath)
+        return self.tableViewHandler.tableView(tableView, cellForRowAt: indexPath)
     }
 }
 
@@ -56,7 +56,7 @@ extension GDListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        self.listHandler.tableView(tableView, willDisplay: cell, forRowAt: indexPath)
+        self.tableViewHandler.tableView(tableView, willDisplay: cell, forRowAt: indexPath)
     }
 }
 
@@ -70,7 +70,7 @@ extension GDListViewController: GDLoaderDelegate {
     
     func loaderDidLoad(_ loader: GDLoader, data: [Data]?) {
         if let d = data?[0] {
-            self.listHandler.listFromData(d)
+            self.tableViewHandler.listFromData(d)
         }
         DispatchQueue.main.async {
             self.loadingView.isHidden = true

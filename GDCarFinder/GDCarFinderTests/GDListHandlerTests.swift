@@ -33,7 +33,7 @@ class GDListHandlerTests: XCTestCase {
             // prepare data
             let data = try encoder.encode(poiData)
             
-            let listHandler = GDCarListHandler(decoder: decoder, cellHandler: cellHandler)
+            let listHandler = GDCarTableViewHandler(decoder: decoder, cellHandler: cellHandler)
             listHandler.listFromData(data)
             let list = listHandler.list()
             XCTAssertNotNil(list)

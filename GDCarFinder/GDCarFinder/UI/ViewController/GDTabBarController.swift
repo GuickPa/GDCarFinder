@@ -9,6 +9,9 @@ import UIKit
 
 class GDTabBarController: UITabBarController {
     
+    let loader: GDLoader = GDDataLoader()
+    let listHandler: GDListHandler = GDCarListHandler(decoder: GDGenericDataDecoder())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,9 +36,9 @@ class GDTabBarController: UITabBarController {
     
     private func setupListTab() -> UIViewController{
         let vc = GDListViewController(
-            loader: GDDataLoader(),
-            listHandler: GDCarListHandler(
-                decoder: GDGenericDataDecoder(),
+            loader: self.loader,
+            tableViewHandler: GDCarTableViewHandler(
+                listHandler: self.listHandler,
                 cellHandler: GDPoiTableViewCellHandler())
             )
         vc.title = GDConst.localizedString("gd_tab_list_title")
@@ -43,7 +46,10 @@ class GDTabBarController: UITabBarController {
     }
     
     private func setupMapTab() -> UIViewController{
-        let vc = GDMapViewController(mapHandler: GDMapViewHandler())
+        let vc = GDMapViewController(
+            loader: self.loader,
+            mapHandler: GDMapViewHandler(listHandler: self.listHandler)
+        )
         vc.title = GDConst.localizedString("gd_tab_map_title")
         return vc
     }
