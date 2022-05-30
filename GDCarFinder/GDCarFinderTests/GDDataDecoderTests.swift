@@ -11,9 +11,9 @@ import XCTest
 class GDDataDecoderTests: XCTestCase {
     
     let items:[GDPoi] = [
-        GDPoi(id: 0, state: "active", type: "taxi", heading: 0.0, coordinate: GDCoordinate(latitute: 0.0, longitude: 0.0)),
-        GDPoi(id: 1, state: "active", type: "scooter", heading: 0.0, coordinate: GDCoordinate(latitute: 0.0, longitude: 0.0)),
-        GDPoi(id: 2, state: "active", type: "bike", heading: 0.0, coordinate: GDCoordinate(latitute: 0.0, longitude: 0.0)),
+        GDPoi(id: 0, state: "active", type: "taxi", heading: 0.0, coordinate: GDCoordinate(latitude: 0.0, longitude: 0.0)),
+        GDPoi(id: 1, state: "active", type: "scooter", heading: 0.0, coordinate: GDCoordinate(latitude: 0.0, longitude: 0.0)),
+        GDPoi(id: 2, state: "active", type: "bike", heading: 0.0, coordinate: GDCoordinate(latitude: 0.0, longitude: 0.0)),
     ]
 
     override func setUpWithError() throws {

@@ -17,6 +17,29 @@ class GDListHandlerTests: XCTestCase {
         GDPoi(id: 2, state: "active", type: "bike", heading: 0.0, coordinate: GDCoordinate(latitude: 0.0, longitude: 0.0)),
     ]
     let cellHandler:GDTableViewCellHandler = GDPoiTableViewCellHandler()
+    
+    class TestListHandler: GDListHandler {
+        let data: GDPoiData
+        
+        init(data: GDPoiData) {
+            self.data = data
+        }
+        
+        func list() -> GDPoiData? {
+            return data
+        }
+        
+        func listFromData(_ data: Data) {
+            
+        }
+        
+        func getItem(byIndex index: Int) -> GDPoi? {
+            if index < data.poiList.count {
+                return data.poiList[index]
+            }
+            return nil
+        }
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -33,7 +56,7 @@ class GDListHandlerTests: XCTestCase {
             // prepare data
             let data = try encoder.encode(poiData)
             
-            let listHandler = GDCarTableViewHandler(decoder: decoder, cellHandler: cellHandler)
+            let listHandler = GDCarTableViewHandler(listHandler: TestListHandler(data:poiData), cellHandler: GDPoiTableViewCellHandler())
             listHandler.listFromData(data)
             let list = listHandler.list()
             XCTAssertNotNil(list)
