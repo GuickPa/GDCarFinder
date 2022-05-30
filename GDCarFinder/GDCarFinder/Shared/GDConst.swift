@@ -18,6 +18,7 @@ class GDConst {
     static let defaultBackgroundColor = UIColor(hexString: "3C3E44")
     static let cellBGColor0 = UIColor(hexString: "FEFEFE")
     static let cellBGColor1 = UIColor(hexString: "FAFAFA")
+    static let iconBGColor = UIColor(hexString: "00B2FF")
     
     // constants
     static let centerCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.5532674, longitude: 9.9907421) // Hamburg center from Google Maps

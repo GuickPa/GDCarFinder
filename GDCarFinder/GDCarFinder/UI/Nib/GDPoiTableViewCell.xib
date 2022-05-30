@@ -8,54 +8,57 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="poi.cell.gd.it" rowHeight="120" id="R2G-cq-2oG" customClass="GDPoiTableViewCell" customModule="GDCarFinder" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="poi.cell.gd.it" rowHeight="90" id="R2G-cq-2oG" customClass="GDPoiTableViewCell" customModule="GDCarFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R2G-cq-2oG" id="xRL-Uv-60K">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEB-4i-mNw">
-                        <rect key="frame" x="128" y="8" width="266" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEB-4i-mNw">
+                        <rect key="frame" x="72" y="8" width="322" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="W3e-vj-lxk"/>
+                            <constraint firstAttribute="height" constant="17" id="W3e-vj-lxk"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.69803921570000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewy-kf-ARZ">
-                        <rect key="frame" x="128" y="45" width="266" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewy-kf-ARZ">
+                        <rect key="frame" x="72" y="29" width="322" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="18" id="luN-pX-iT3"/>
+                            <constraint firstAttribute="height" constant="17" id="luN-pX-iT3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.5" blue="0.22526041666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hi-DS-bCM">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="64" height="90"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Oc-mD-TyH">
-                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vehicle" translatesAutoresizingMaskIntoConstraints="NO" id="9Oc-mD-TyH" customClass="GDIconView" customModule="GDCarFinder" customModuleProvider="target">
+                                <rect key="frame" x="10" y="23" width="44" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="1Fx-sB-WhW"/>
+                                    <constraint firstAttribute="height" constant="44" id="GBW-Sp-d8D"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="9Oc-mD-TyH" secondAttribute="trailing" id="4Qm-4x-W6k"/>
-                            <constraint firstAttribute="bottom" secondItem="9Oc-mD-TyH" secondAttribute="bottom" id="DuY-p5-Qt1"/>
-                            <constraint firstItem="9Oc-mD-TyH" firstAttribute="top" secondItem="8hi-DS-bCM" secondAttribute="top" id="Vtg-Em-hNg"/>
-                            <constraint firstItem="9Oc-mD-TyH" firstAttribute="leading" secondItem="8hi-DS-bCM" secondAttribute="leading" id="rvM-RV-lLh"/>
-                            <constraint firstAttribute="width" constant="120" id="xjd-xS-Y1E"/>
+                            <constraint firstItem="9Oc-mD-TyH" firstAttribute="centerY" secondItem="8hi-DS-bCM" secondAttribute="centerY" id="FtO-Aw-neb"/>
+                            <constraint firstItem="9Oc-mD-TyH" firstAttribute="centerX" secondItem="8hi-DS-bCM" secondAttribute="centerX" id="RME-Pq-vb9"/>
+                            <constraint firstAttribute="width" constant="64" id="xjd-xS-Y1E"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-gM-9ql">
-                        <rect key="frame" x="128" y="71" width="266" height="38"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coordinate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-gM-9ql">
+                        <rect key="frame" x="72" y="54" width="322" height="25"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ewy-kf-ARZ" secondAttribute="trailing" constant="20" symbolic="YES" id="9vZ-R4-pkq"/>
                     <constraint firstItem="HEB-4i-mNw" firstAttribute="leading" secondItem="8hi-DS-bCM" secondAttribute="trailing" constant="8" symbolic="YES" id="DDP-Ri-sX9"/>
@@ -66,7 +69,7 @@
                     <constraint firstItem="8hi-DS-bCM" firstAttribute="top" secondItem="xRL-Uv-60K" secondAttribute="top" id="cEJ-UV-ctt"/>
                     <constraint firstItem="8hi-DS-bCM" firstAttribute="leading" secondItem="xRL-Uv-60K" secondAttribute="leading" id="nBR-Bg-2CT"/>
                     <constraint firstItem="HEB-4i-mNw" firstAttribute="top" secondItem="xRL-Uv-60K" secondAttribute="top" constant="8" id="p6d-Oj-8P2"/>
-                    <constraint firstItem="ewy-kf-ARZ" firstAttribute="top" secondItem="HEB-4i-mNw" secondAttribute="bottom" constant="16" id="s0Q-IN-Kad"/>
+                    <constraint firstItem="ewy-kf-ARZ" firstAttribute="top" secondItem="HEB-4i-mNw" secondAttribute="bottom" constant="4" id="s0Q-IN-Kad"/>
                     <constraint firstItem="8ef-gM-9ql" firstAttribute="leading" secondItem="8hi-DS-bCM" secondAttribute="trailing" constant="8" symbolic="YES" id="s69-BE-e9B"/>
                     <constraint firstAttribute="bottom" secondItem="8hi-DS-bCM" secondAttribute="bottom" id="swO-tz-9PG"/>
                     <constraint firstItem="8ef-gM-9ql" firstAttribute="top" secondItem="ewy-kf-ARZ" secondAttribute="bottom" constant="8" id="ygO-pw-Ljb"/>
@@ -82,4 +85,7 @@
             <point key="canvasLocation" x="85.507246376811594" y="111.83035714285714"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="vehicle" width="32" height="32"/>
+    </resources>
 </document>

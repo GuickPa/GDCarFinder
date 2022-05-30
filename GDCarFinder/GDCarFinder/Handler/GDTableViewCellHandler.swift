@@ -17,7 +17,7 @@ class GDPoiTableViewCellHandler: GDTableViewCellHandler {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GDPoiTableViewCell.reuseIdentifier, for: indexPath) as! GDPoiTableViewCell
         cell.prepareForReuse()
-        cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? GDConst.cellBGColor0 : GDConst.cellBGColor1
+        cell.contentView.backgroundColor = GDConst.cellBGColor0
         return cell
     }
     

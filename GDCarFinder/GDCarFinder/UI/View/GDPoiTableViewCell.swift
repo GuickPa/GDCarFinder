@@ -19,7 +19,6 @@ class GDPoiTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.nameLabel.text = nil
-        self.iconView.image = nil
         self.conditionLabel.text = nil
         self.positionLabel.text = nil
     }

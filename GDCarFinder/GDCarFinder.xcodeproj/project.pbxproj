@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0D291E28455C20008A7786 /* GDIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D291D28455C20008A7786 /* GDIconView.swift */; };
 		BE3733DE28401CB5000F4AC8 /* GDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */; };
 		BE3733E128401D05000F4AC8 /* GDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733DF28401D05000F4AC8 /* GDView.swift */; };
 		BE3733E228401D05000F4AC8 /* GDPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E028401D05000F4AC8 /* GDPicView.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE0D291D28455C20008A7786 /* GDIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDIconView.swift; sourceTree = "<group>"; };
 		BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDBaseViewController.swift; sourceTree = "<group>"; };
 		BE3733DF28401D05000F4AC8 /* GDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDView.swift; sourceTree = "<group>"; };
 		BE3733E028401D05000F4AC8 /* GDPicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPicView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				BE3733E028401D05000F4AC8 /* GDPicView.swift */,
 				BE3733DF28401D05000F4AC8 /* GDView.swift */,
 				BEC628CC2840BCE100429251 /* GDPoiTableViewCell.swift */,
+				BE0D291D28455C20008A7786 /* GDIconView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				BE3733DE28401CB5000F4AC8 /* GDBaseViewController.swift in Sources */,
 				BEA4C48B283EA3F400F0D83B /* GDViewLoader.swift in Sources */,
 				BEA4C482283EA3F400F0D83B /* GDSession.swift in Sources */,
+				BE0D291E28455C20008A7786 /* GDIconView.swift in Sources */,
 				BEC628CB2840BC8E00429251 /* GDTableViewCellHandler.swift in Sources */,
 				BEA4C483283EA3F400F0D83B /* GDOperationQueueManager.swift in Sources */,
 				BEA4C491283EA47100F0D83B /* GDDataDecoder.swift in Sources */,
