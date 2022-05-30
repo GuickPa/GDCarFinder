@@ -48,11 +48,23 @@ class GDMapViewController: GDBaseViewController {
 extension GDMapViewController: MKMapViewDelegate {
     //MARK: MKMapViewDelegate
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-        self.mapHandler.mapView(regionDidChange: mapView)
+    
+    }
+    
+    func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
+        let rect = self.mapHandler.mapView(regionDidChange: mapView)
+        self.loader.delegate = self
+        if self.loader.isLoading {
+            self.loader.cancel()
+        }
+        self.loader.load(
+            urlString: "\(GDConst.vehicleListBaseURLString)?p1Lat=\(rect.p1.latitude)&p1Lon=\(rect.p1.longitude)&p2Lat=\(rect.p2.latitude)&p2Lon=\(rect.p2.longitude)",
+            handler: GDOperationQueueManager.instance)
+
     }
     
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-        self.mapHandler.mapView(didFinishLoadingMap: mapView)
+        // self.mapHandler.mapView(didFinishLoadingMap: mapView)
     }
     
     func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {

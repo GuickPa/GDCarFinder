@@ -9,13 +9,18 @@ import Foundation
 import UIKit
 import MapKit
 
+struct GDMapRect {
+    let p1: CLLocationCoordinate2D
+    let p2: CLLocationCoordinate2D
+}
+
 protocol GDMapHandler: AnyObject {
     func list() -> GDPoiData?
     func listFromData(_ data: Data)
     func getItem(byIndex index: Int) -> GDPoi?
     func viewDidLoad(view: MKMapView)
     func mapView(didFinishLoadingMap mapView: MKMapView)
-    func mapView(regionDidChange mapView: MKMapView)
+    func mapView(regionDidChange mapView: MKMapView) -> GDMapRect
     func loadAnnotations(inMapView mapView: MKMapView)
 }
 
@@ -38,26 +43,26 @@ class GDMapViewHandler: GDMapHandler {
         return listHandler.listFromData(data)
     }
     
-    private func getRegion() -> MKCoordinateRegion {
+    private func getRegion(p1: CLLocationCoordinate2D, p2: CLLocationCoordinate2D) -> MKCoordinateRegion {
         var minLat:CLLocationDegrees
         var maxLat:CLLocationDegrees
         var minLon:CLLocationDegrees
         var maxLon:CLLocationDegrees
         
-        if GDConst.regionP1Coordinate.latitude > GDConst.regionP2Coordinate.latitude {
-            minLat = GDConst.regionP2Coordinate.latitude
-            maxLat = GDConst.regionP1Coordinate.latitude
+        if p1.latitude > p2.latitude {
+            minLat = p2.latitude
+            maxLat = p1.latitude
         } else {
-            minLat = GDConst.regionP1Coordinate.latitude
-            maxLat = GDConst.regionP2Coordinate.latitude
+            minLat = p1.latitude
+            maxLat = p2.latitude
         }
         
-        if GDConst.regionP1Coordinate.longitude > GDConst.regionP2Coordinate.longitude {
-            minLon = GDConst.regionP2Coordinate.longitude
-            maxLon = GDConst.regionP1Coordinate.longitude
+        if p1.longitude > p2.longitude {
+            minLon = p2.longitude
+            maxLon = p1.longitude
         } else {
-            minLon = GDConst.regionP1Coordinate.longitude
-            maxLon = GDConst.regionP2Coordinate.longitude
+            minLon = p1.longitude
+            maxLon = p2.longitude
         }
         
         let span = MKCoordinateSpan(latitudeDelta: maxLat - minLat, longitudeDelta: maxLon - minLon)
@@ -68,18 +73,28 @@ class GDMapViewHandler: GDMapHandler {
     }
     
     func viewDidLoad(view: MKMapView) {
-        view.setRegion(self.getRegion(), animated: false)
+        view.setRegion(self.getRegion(
+            p1: GDConst.regionP1Coordinate,
+            p2: GDConst.regionP2Coordinate
+        ), animated: false)
     }
     
     func mapView(didFinishLoadingMap mapView: MKMapView) {
         
     }
     
-    func mapView(regionDidChange mapView: MKMapView) {
+    func mapView(regionDidChange mapView: MKMapView) -> GDMapRect {
+        let region = mapView.region
+        let p1 = CLLocationCoordinate2D(
+            latitude: region.center.latitude - region.span.latitudeDelta/2, longitude: region.center.longitude - region.span.longitudeDelta/2)
+        let p2 = CLLocationCoordinate2D(
+            latitude: region.center.latitude + region.span.latitudeDelta/2, longitude: region.center.longitude + region.span.longitudeDelta/2)
         
+        return GDMapRect(p1: p1, p2: p2)
     }
     
     func loadAnnotations(inMapView mapView: MKMapView) {
+        mapView.removeAnnotations(mapView.annotations)
         self.list()?.poiList.forEach({ item in
             let annotation = GDPoiAnnotation(
                 name: "\(item.type) ID \(item.id)",

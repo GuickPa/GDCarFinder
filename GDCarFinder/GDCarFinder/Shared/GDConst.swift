@@ -21,7 +21,7 @@ class GDConst {
     
     // constants
     static let centerCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.5532674, longitude: 9.9907421) // Hamburg center from Google Maps
-    static let regionP1Coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.5600808, longitude: 9.9242722)
+    static let regionP1Coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.694865, longitude: 9.757589)
     static let regionP2Coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.394655, longitude: 10.099891)
     
     // generic messages

@@ -35,6 +35,8 @@ class GDListViewController: GDBaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.loader.delegate = self
+        self.mainTableView.reloadData()
     }
 }
 
