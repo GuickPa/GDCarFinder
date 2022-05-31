@@ -22,10 +22,15 @@ protocol GDMapHandler: AnyObject {
     func mapView(didFinishLoadingMap mapView: MKMapView)
     func mapView(regionDidChange mapView: MKMapView) -> GDMapRect
     func loadAnnotations(inMapView mapView: MKMapView)
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView)
 }
 
 class GDMapViewHandler: GDMapHandler {
     let listHandler: GDListHandler
+    private var geocodeOperation: GDGeocodeOperation!
+    weak var lastSelectedAnnotation: MKAnnotationView? = nil
     
     func list() -> GDPoiData? {
         return listHandler.list()
@@ -102,5 +107,70 @@ class GDMapViewHandler: GDMapHandler {
                 coordinate: CLLocationCoordinate2D(latitude: item.coordinate.latitude, longitude: item.coordinate.longitude))
             mapView.addAnnotation(annotation)
         })
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        let annotationIdentifier = GDPoiAnnotation.identifier
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+        }
+        if let annotationView = annotationView {
+            annotationView.rightCalloutAccessoryView = nil
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "vehicle")
+        }
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? GDPoiAnnotation {
+            self.lastSelectedAnnotation = view
+            self.loadAddress(coordinate: annotation.coordinate, handler: GDOperationQueueManager.instance)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        if view == self.lastSelectedAnnotation {
+            self.lastSelectedAnnotation = nil
+        }
+    }
+}
+
+extension GDMapViewHandler: GDGeocodeOperationDelegate {
+    func operationStarted(_ operation: GDGeocodeOperation) {
+        
+    }
+    
+    func operationCompleted(_ operation: GDGeocodeOperation, withPlacemarks placemarks: [CLPlacemark]) {
+        if placemarks.count > 0 {
+            let p = placemarks[0]
+            (self.lastSelectedAnnotation?.annotation as? GDPoiAnnotation)?.address = p.name ?? p.locality
+            // Tricky way to update information
+            self.lastSelectedAnnotation?.annotation = self.lastSelectedAnnotation?.annotation
+        }
+    }
+    
+    func operationFailed(_ operation: GDGeocodeOperation, withError error: Error?) {
+        
+    }
+    
+    func operationCancelled(_ operation: GDGeocodeOperation) {
+        
+    }
+    
+    func loadAddress(coordinate: CLLocationCoordinate2D, handler: GDOperationQueueHandler) {
+        if self.geocodeOperation != nil {
+            self.geocodeOperation.cancel()
+        }
+        self.geocodeOperation = GDGeocodeOperation(withCoordinate: coordinate, delegate: self)
+        handler.addToQueue(self.geocodeOperation)
     }
 }

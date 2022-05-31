@@ -70,6 +70,18 @@ extension GDMapViewController: MKMapViewDelegate {
     func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
         self.mapHandler.mapView(didFinishLoadingMap: mapView)
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        self.mapHandler.mapView(mapView, viewFor: annotation)
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        self.mapHandler.mapView(mapView, didSelect: view)
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        self.mapHandler.mapView(mapView, didDeselect: view)
+    }
 }
 
 //MARK: GDLoaderDelegate

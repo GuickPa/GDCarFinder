@@ -57,6 +57,7 @@ class GDCarTableViewHandler: GDTableViewHandler {
         if let visibles = tableView.indexPathsForVisibleRows {
             visibles.forEach { indexPath in
                 if let c = tableView.cellForRow(at: indexPath) as? GDPoiTableViewCell, let poi = self.getItem(byIndex: indexPath.row) {
+                    // turn coordinate into address
                     c.loadAddress(coordinate: poi.coordinate, handler: GDOperationQueueManager.instance)
                 }
             }

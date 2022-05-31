@@ -53,6 +53,4 @@ extension GDPoiTableViewCell: GDGeocodeOperationDelegate {
     func operationCancelled(_ operation: GDGeocodeOperation) {
         
     }
-    
-    
 }
