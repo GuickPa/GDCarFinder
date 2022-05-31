@@ -21,6 +21,7 @@ class GDConst {
     static let iconBGColor = UIColor(hexString: "00B2FF")
     
     // constants
+    static let cacheSize: Int = 1000
     static let centerCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.5532674, longitude: 9.9907421) // Hamburg center from Google Maps
     static let regionP1Coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.694865, longitude: 9.757589)
     static let regionP2Coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.394655, longitude: 10.099891)

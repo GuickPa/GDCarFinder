@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE0D291E28455C20008A7786 /* GDIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0D291D28455C20008A7786 /* GDIconView.swift */; };
+		BE3463F128456CFA000BB00E /* GDGeocodeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3463F028456CFA000BB00E /* GDGeocodeOperation.swift */; };
 		BE3733DE28401CB5000F4AC8 /* GDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */; };
 		BE3733E128401D05000F4AC8 /* GDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733DF28401D05000F4AC8 /* GDView.swift */; };
 		BE3733E228401D05000F4AC8 /* GDPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3733E028401D05000F4AC8 /* GDPicView.swift */; };
@@ -42,6 +43,8 @@
 		BEA98D0C2843DE53006BD165 /* GDMapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA98D0B2843DE53006BD165 /* GDMapHandler.swift */; };
 		BEA98D0E2843E04C006BD165 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA98D0D2843E04C006BD165 /* CoreLocation.framework */; };
 		BEA98D1028440AF6006BD165 /* GDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA98D0F28440AF6006BD165 /* GDTabBarController.swift */; };
+		BEB33D8F2845D2AF0065245C /* GDCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB33D8E2845D2AF0065245C /* GDCache.swift */; };
+		BEB33D912845D3140065245C /* GDCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB33D902845D3140065245C /* GDCacheTest.swift */; };
 		BEC628CB2840BC8E00429251 /* GDTableViewCellHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC628CA2840BC8E00429251 /* GDTableViewCellHandler.swift */; };
 		BEC628CD2840BCE100429251 /* GDPoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC628CC2840BCE100429251 /* GDPoiTableViewCell.swift */; };
 		BEC628CF2840BF9D00429251 /* GDDataDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC628CE2840BF9D00429251 /* GDDataDecoderTests.swift */; };
@@ -71,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		BE0D291D28455C20008A7786 /* GDIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDIconView.swift; sourceTree = "<group>"; };
+		BE3463F028456CFA000BB00E /* GDGeocodeOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGeocodeOperation.swift; sourceTree = "<group>"; };
 		BE3733DD28401CB5000F4AC8 /* GDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDBaseViewController.swift; sourceTree = "<group>"; };
 		BE3733DF28401D05000F4AC8 /* GDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDView.swift; sourceTree = "<group>"; };
 		BE3733E028401D05000F4AC8 /* GDPicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPicView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 		BEA98D0B2843DE53006BD165 /* GDMapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMapHandler.swift; sourceTree = "<group>"; };
 		BEA98D0D2843E04C006BD165 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BEA98D0F28440AF6006BD165 /* GDTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTabBarController.swift; sourceTree = "<group>"; };
+		BEB33D8E2845D2AF0065245C /* GDCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCache.swift; sourceTree = "<group>"; };
+		BEB33D902845D3140065245C /* GDCacheTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCacheTest.swift; sourceTree = "<group>"; };
 		BEC628CA2840BC8E00429251 /* GDTableViewCellHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTableViewCellHandler.swift; sourceTree = "<group>"; };
 		BEC628CC2840BCE100429251 /* GDPoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPoiTableViewCell.swift; sourceTree = "<group>"; };
 		BEC628CE2840BF9D00429251 /* GDDataDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDDataDecoderTests.swift; sourceTree = "<group>"; };
@@ -249,6 +255,7 @@
 		BEA4C442283EA39A00F0D83B /* GDCarFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				BEB33D902845D3140065245C /* GDCacheTest.swift */,
 				BEF1DA57283F8AA40067F37B /* GDAPIOperationActionTests.swift */,
 				BEF1DA56283F8AA40067F37B /* GDOperationTest.swift */,
 				BEA4C443283EA39A00F0D83B /* GDCarFinderTests.swift */,
@@ -281,6 +288,7 @@
 				BEA4C477283EA3F400F0D83B /* GDOperationQueueManager.swift */,
 				BEA4C478283EA3F400F0D83B /* GDOperation.swift */,
 				BEA4C479283EA3F400F0D83B /* Actions */,
+				BE3463F028456CFA000BB00E /* GDGeocodeOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -296,6 +304,7 @@
 		BEA4C47B283EA3F400F0D83B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BEB33D8E2845D2AF0065245C /* GDCache.swift */,
 				BEA4C47C283EA3F400F0D83B /* GDString.swift */,
 				BEA4C47D283EA3F400F0D83B /* GDError.swift */,
 				BEA4C47E283EA3F400F0D83B /* GDConst.swift */,
@@ -477,7 +486,9 @@
 				BE44B46B284428B600C72AE3 /* GDTableViewHandler.swift in Sources */,
 				BE3733E528401E0C000F4AC8 /* GDListViewController.swift in Sources */,
 				BE3733E128401D05000F4AC8 /* GDView.swift in Sources */,
+				BEB33D8F2845D2AF0065245C /* GDCache.swift in Sources */,
 				BEA98D0C2843DE53006BD165 /* GDMapHandler.swift in Sources */,
+				BE3463F128456CFA000BB00E /* GDGeocodeOperation.swift in Sources */,
 				BEA98D1028440AF6006BD165 /* GDTabBarController.swift in Sources */,
 				BEA4C484283EA3F400F0D83B /* GDOperation.swift in Sources */,
 				BEA4C494283EA47100F0D83B /* GDLoader.swift in Sources */,
@@ -510,6 +521,7 @@
 				BECFCA4328410A690050D3E9 /* GDListHandlerTests.swift in Sources */,
 				BEF1DA59283F8AA40067F37B /* GDAPIOperationActionTests.swift in Sources */,
 				BEC628CF2840BF9D00429251 /* GDDataDecoderTests.swift in Sources */,
+				BEB33D912845D3140065245C /* GDCacheTest.swift in Sources */,
 				BEF1DA58283F8AA40067F37B /* GDOperationTest.swift in Sources */,
 				BEA4C444283EA39A00F0D83B /* GDCarFinderTests.swift in Sources */,
 			);

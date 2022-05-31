@@ -15,6 +15,7 @@ protocol GDTableViewHandler {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    func tableViewDidEndDecelerating(_ tableView: UITableView)
 }
 
 class GDCarTableViewHandler: GDTableViewHandler {
@@ -49,6 +50,16 @@ class GDCarTableViewHandler: GDTableViewHandler {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let poi = self.getItem(byIndex: indexPath.row) {
             self.cellHandler.tableView(tableView, willDisplay: cell, forRowAt: indexPath, withItem: poi)
+        }
+    }
+    
+    func tableViewDidEndDecelerating(_ tableView: UITableView) {
+        if let visibles = tableView.indexPathsForVisibleRows {
+            visibles.forEach { indexPath in
+                if let c = tableView.cellForRow(at: indexPath) as? GDPoiTableViewCell, let poi = self.getItem(byIndex: indexPath.row) {
+                    c.loadAddress(coordinate: poi.coordinate, handler: GDOperationQueueManager.instance)
+                }
+            }
         }
     }
 }

@@ -37,6 +37,8 @@ class GDListViewController: GDBaseViewController {
         super.viewDidAppear(animated)
         self.loader.delegate = self
         self.mainTableView.reloadData()
+        // Make handler to load address at first loading
+        self.tableViewHandler.tableViewDidEndDecelerating(self.mainTableView)
     }
 }
 
@@ -48,6 +50,13 @@ extension GDListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return self.tableViewHandler.tableView(tableView, cellForRowAt: indexPath)
+    }
+}
+
+//MARK: UIScrollViewDelegate
+extension GDListViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.tableViewHandler.tableViewDidEndDecelerating(self.mainTableView)
     }
 }
 
@@ -79,6 +88,8 @@ extension GDListViewController: GDLoaderDelegate {
             self.mainTableView.dataSource = self
             self.mainTableView.delegate = self
             self.mainTableView.reloadData()
+            // Make handler to load address at first loading
+            self.tableViewHandler.tableViewDidEndDecelerating(self.mainTableView)
         }
     }
     
